@@ -17,8 +17,10 @@ INSERT INTO pessoas VALUES
 -- Modo de inserção de várias instâncias separadas por vírgulas:
 
 INSERT INTO pessoas VALUES
-(DEFAULT, 'Cláudio', '1975-04-22', 'M', '99.0', '2.15', 'Brasil'),
-(DEFAULT, 'Pedro', '1999-12-03', 'M', '87', '2', DEFAULT),
-(DEFAULT, 'Janaína', '1987-11-12', 'F', '75.4', '1.66', 'EUA');	
+(DEFAULT, 'David Ferreira', '2002-11-07', 'M', '60.0', '1.70', 'Brasil'),
+(DEFAULT, 'Kaio Vinicius', '2001-05-02', 'M', 80.5, 1.82, DEFAULT),
+(DEFAULT, 'Kelli Francis', '2000-05-15', 'F', 62.5, 1.70, 'Canadá'),
+(DEFAULT, 'Sorra Marcs', '1980-11-22', 'F', 60.5, 1.60, 'França'),
+(DEFAULT, 'Francis Mandela', '1983-10-15', 'M', 72.3, 1.75, 'África do Sul');
 
 SELECT * FROM pessoas;
