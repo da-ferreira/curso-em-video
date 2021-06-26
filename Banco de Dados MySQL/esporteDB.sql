@@ -4,6 +4,7 @@ DEFAULT CHARACTER SET = utf8mb4
 DEFAULT COLLATE utf8mb4_general_ci;
 
 USE esporte;
+SELECT database();  -- Mostra qual banco de dados está sendo usando
 
 CREATE TABLE IF NOT EXISTS times_brasileiros (
 	id          int         NOT NULL AUTO_INCREMENT,
