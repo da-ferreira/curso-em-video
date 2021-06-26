@@ -7,17 +7,17 @@ USE esporte;
 
 CREATE TABLE IF NOT EXISTS times_brasileiros (
 	id          int         NOT NULL AUTO_INCREMENT,
-    nome        varchar(50) NOT NULL,
-    sigla       varchar(8),
-    fundacao    date        NOT NULL,
-    localizacao varchar(20),
-    treinador   varchar(50),
-    PRIMARY KEY (id)
+	nome        varchar(50) NOT NULL,
+	sigla       varchar(8),
+	fundacao    date        NOT NULL,
+	localizacao varchar(20),
+	treinador   varchar(50),
+	PRIMARY KEY (id)
 ) DEFAULT CHARSET = utf8mb4;
 
 ALTER TABLE times_brasileiros
 MODIFY COLUMN localizacao enum('Acre', 'Alagoas',  'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão',
-                               'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Rio de Janeiro',
+							   'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Rio de Janeiro',
 							   'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônia', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins');
 
 INSERT INTO times_brasileiros VALUES
@@ -41,4 +41,13 @@ SET treinador = 'Vinícius Eutrópio'
 WHERE nome = 'Paysandu Sport Club';
 
 SELECT * FROM times_brasileiros;
+
+INSERT INTO times_brasileiros VALUES
+(DEFAULT, 'Santos Futebol Clube', 'SFC', '1922-02-15', 'São Paulo', 'Michel Lo');
+
+ALTER TABLE times_brasileiros
+MODIFY COLUMN nome varchar(50) NOT NULL UNIQUE;  -- Tornando o nome único
+
+DELETE FROM times_brasileiros
+WHERE id = '11';
   
