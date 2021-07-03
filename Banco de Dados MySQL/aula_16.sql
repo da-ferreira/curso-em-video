@@ -6,7 +6,7 @@ USE cadastro;
 -- |Gafanhoto| 1...<>...n |Assiste| n...<>...1 |Curso|
 
 CREATE TABLE gafanhoto_assiste_curso (
-	id          int NOT NULL AUTO_INCREMENT,
+    id          int NOT NULL AUTO_INCREMENT,
     data        date,
     idgafanhoto int,
     idcurso     int,
@@ -38,7 +38,7 @@ ON gafanhotos.id = assiste.idgafanhoto
 ORDER BY gafanhotos.nome;
 
 -- Join com mais de duas tabelas:
-SELECT gafanhotos.nome, cursos.nome AS 'nome_curso', cursos.descricao AS 'descricao_curso', assiste.idcurso FROM gafanhotos  -- Dando apelido para atributos
+SELECT gafanhotos.nome AS 'Nome Gafanhoto', cursos.nome AS 'Nome Curso', cursos.descricao AS 'Descrição Curso', assiste.idcurso FROM gafanhotos  -- Dando apelido para atributos
 INNER JOIN gafanhoto_assiste_curso AS assiste
 ON gafanhotos.id = assiste.idgafanhoto
 INNER JOIN cursos
