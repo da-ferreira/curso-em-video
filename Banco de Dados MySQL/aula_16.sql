@@ -38,7 +38,7 @@ ON gafanhotos.id = assiste.idgafanhoto
 ORDER BY gafanhotos.nome;
 
 -- Join com mais de duas tabelas e dando apelido para atributos
-SELECT gafanhotos.nome AS 'Nome Gafanhoto', cursos.nome AS 'Nome Curso', cursos.descricao AS 'Descrição Curso', assiste.idcurso AS 'ID do Curso' FROM gafanhotos 
+SELECT gafanhotos.nome AS 'Nome do gafanhoto', cursos.nome AS 'Nome do curso', cursos.descricao AS 'Descrição do curso', assiste.idcurso AS 'ID do curso' FROM gafanhotos 
 INNER JOIN gafanhoto_assiste_curso AS assiste
 ON gafanhotos.id = assiste.idgafanhoto
 INNER JOIN cursos
