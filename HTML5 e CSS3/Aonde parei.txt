@@ -1,4 +1,0 @@
-Instalar PHP e Javascript no vscode
-mudar word wrap para on e talvez o Salvamento automatico
-
-- Capitulo 4 (a ler)
