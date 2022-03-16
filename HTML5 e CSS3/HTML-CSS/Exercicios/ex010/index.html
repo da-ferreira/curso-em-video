@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+
+<body>
+    <h1>Usando links externos</h1> 
+    <p>  <!-- A tag 'a' vem de ancora. O link vai sobrepor a página atual -->
+        Você pode acessar o meu <a href="https://github.com/da-ferreira">perfil no GitHub</a>.
+    </p>
+    <p>  <!-- O link vai abrir em outra página. E estou referenciando ele como um link que vai pra fora do meu site. -->
+        Ou você pode acessar diretamente meu <a href="https://github.com/da-ferreira/C" target="_blank" rel="external">
+            repositório público de Linguagem C</a> tabmém no GitHub.
+    </p>
+
+    <h1>Usando links internos</h1>
+        <p>
+            Esta é a primeira página do site. Se você quiser, pode acessar a minha <a href="pag02.html" rel="next" target="_self">segunda página.</a>
+        </p>
+        <p>  <!-- target="_self" abre na própria página -->
+            Você também pode acessar a nossa <a href="noticias/pag003.html" rel="next" target="_self">página de notícias</a>.
+        </p>
+
+    <h1>Links para download</h1>
+        <ul>
+            <li>
+                <a href="livro/Lorem Ipsom Cap. 4- Lorem Ipson.pdf" download="Lorem Ipsom Cap. 4- Lorem Ipson.pdf" type="application/pdf">
+                Baixar o livro em PDF</a>
+            </li>
+            <li><a href="livro/Lorem Ipsom Cap. 4- Lorem Ipson.zip" download="Lorem Ipsom Cap. 4- Lorem Ipson.zip" type="application/zip">
+                Baixar o livro compactado em ZIP</a>
+            </li>
+        </ul>
+</body>
+</html> 
