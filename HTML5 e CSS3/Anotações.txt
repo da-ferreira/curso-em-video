@@ -1,4 +1,3 @@
-Capítulo 15 - pág. 07
+Cap. 16
 
-Instalar VSCODE: Javascript, PHP, Python no vscode
 
