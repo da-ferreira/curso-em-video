@@ -30,6 +30,11 @@ body {
     font-family: var(--fonte-padrao);
 }
 
+a.externo::after {  /* Todo link da classe 'externo' terá depois dele */
+    content: '\00A0\1F517';
+
+}
+
 header {
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
     min-height: 120px;
@@ -42,6 +47,7 @@ header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
     font-size: 2.5em;
+    font-weight: normal;
     margin-top: 20px;
     margin-bottom: 5px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.300);
@@ -52,6 +58,7 @@ header > p {
     color: white;
     max-width: 500px;
     margin: auto;
+    margin-bottom: 10px;
     padding-right: 10px;
     padding-left: 10px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.300);
@@ -64,11 +71,11 @@ nav {
 }
 
 nav > a {
-    color: white;
+    color: var(--cor0);
     padding: 10px;
     text-decoration: none;
     font-weight: bold;
-    transition-duration: 0.6s;
+    transition-duration: 0.6s;  /*  Quando mover o mouse por cima ele demora 0.6s de transição*/
 }
 nav > a:hover {
     background-color: var(--cor3);
@@ -79,13 +86,54 @@ nav > a:hover {
 main {
     padding: 20px;
     margin: auto;
-    margin-bottom: 30px;
-    min-width: 300px;
-    max-width: 1000px;
+    margin-bottom: 45px;
+    min-width: 300px;   /* O main não vai diminuir sua largura para menor que 300px */
+    max-width: 1000px;  /* Tmb não vai aumentar sua largura para maior que 1000px */
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.400);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+main h1 {
+    font-family: var(--fonte-android);
+    color: var(--cor5);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+main p {  /* Todos os parágrafos dentro do main */
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 45px;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+main strong {  /* Textos em destaques */
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {  /* Todos os links dentro do main */
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor0);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
 }
 
 main img {
@@ -95,16 +143,61 @@ main img {
 main img.pequena {
     display: block;  /* Mudando o tipo de caixa para box-level */
     margin: auto;
-    width: 50%;
+    width: 350px;
 }
 
-main h1, main h2 {
-    color: var(--cor5);
-    font-family: var(--fonte-android);
+/* 'Gambiarra para ter vídeos responsivos' [INÍCIO] */
+
+.video {
+    border: 1px solid var(--cor5);
+    /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.267);  */  /*  box-shadow igual o bloco do aside */
+    margin-bottom: 30px;
+    padding: 20px 20px 54.2% 20px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.video > iframe {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+}
+
+/* 'Gambiarra para ter vídeos responsivos' [FIM] */
+
+aside {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.267);
+}
+
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';  /* Isso não é compativel com todo tipo de navegador */
+    list-style-position: inside;  /* Os marcadores dentro do box */
+    columns: 2;
 }
 
 footer {
-    background-color: var(--cor5);
     color: white;
+    text-align: center;
+    padding: 35px;
+    font-size: 1.6em;
+    border-top: 0.4px solid var(--cor5);
+}
 
+footer a {
+    color: var(--cor5);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor3);
+}
+
+footer img {
+    width: 30px;
+    margin-bottom: -6px;
 }
